@@ -36,10 +36,13 @@ and this example recommended(with use "LCD.h"):
 
 #include "main.h"
 #include "gpio.h"
-
+#include "lcd.h"
+#include "stdio.h"
 
 #define MAX_KEYPAD_ROW	4
 #define MAX_KEYPAD_COL	4
+
+#define KEYPAD_TIMEOUT 0 //ms
 
 typedef enum
 {
@@ -49,10 +52,10 @@ typedef enum
 	RISING_EDGE
 }keypad_key_state_t;
 
+
 void keypad_process (void);
 uint8_t get_keypad_value (void);
 void keypad_init (keypad_key_state_t state);
 keypad_key_state_t keypad_state_detect (void);
-
 
 #endif //__KEYPAD_4X4_H
