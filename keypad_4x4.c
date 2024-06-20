@@ -23,30 +23,30 @@ static keypad_key_state_t trigge_state = FALLING_EDGE;
 
 uint32_t number = 0;
 
-void keypad_kp_0_9_func (void){
+__weak void keypad_kp_0_9_func (void){
 	char lcd_buff[17] = {0};		
 	number = (number * 10) + get_keypad_value();  //for exampel :)
 	sprintf(lcd_buff, "%d", number);
 	LCD_Puts(0, 0, lcd_buff);
 }
-void keypad_kp_10_func (void){ //kp A   //MENU_CHANGE_PF
+__weak void keypad_kp_10_func (void){ //kp A   //MENU_CHANGE_PF
 	number = 0;
 	LCD_Clear();
 }
-void keypad_kp_11_func (void){ //kp B   //MENU_VIEW_DETALES   //set MOTOR_A PF
+__weak void keypad_kp_11_func (void){ //kp B   //MENU_VIEW_DETALES   //set MOTOR_A PF
 
 }
-void keypad_kp_12_func (void){ //kp C   //MENU_RESET_PRODUCTS_NUM
+__weak void keypad_kp_12_func (void){ //kp C   //MENU_RESET_PRODUCTS_NUM
 	
 }
-void keypad_kp_13_func (void){ //kp D  //MENU_MAIN_PAGE
+__weak void keypad_kp_13_func (void){ //kp D  //MENU_MAIN_PAGE
 	
 }
 
-void keypad_kp_14_func (void){
+__weak void keypad_kp_14_func (void){
 	
 }
-void keypad_kp_15_func (void){
+__weak void keypad_kp_15_func (void){
 	
 }
 

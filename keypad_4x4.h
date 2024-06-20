@@ -52,6 +52,13 @@ typedef enum
 	RISING_EDGE
 }keypad_key_state_t;
 
+void keypad_kp_0_9_func(void);
+void keypad_kp_10_func(void);
+void keypad_kp_11_func(void);
+void keypad_kp_12_func(void);
+void keypad_kp_13_func(void);
+void keypad_kp_14_func(void);
+void keypad_kp_15_func(void);
 
 void keypad_process (void);
 uint8_t get_keypad_value (void);
